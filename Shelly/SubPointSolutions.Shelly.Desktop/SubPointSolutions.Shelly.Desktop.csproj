@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9F7D2FC-D31E-4869-87D7-403F1FF22347}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SubPointSolutions.Shelly.Desktop</RootNamespace>
+    <AssemblyName>SubPointSolutions.Shelly.Desktop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SubPointSolutions.Shelly.Desktop.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\EntityEditorControlAttribute.cs" />
+    <Compile Include="Consts\ShAppFolders.cs" />
+    <Compile Include="Consts\ShAppMenuIds.cs" />
+    <Compile Include="Consts\ShAppViewIds.cs" />
+    <Compile Include="Controls\ShModalDialogControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ShModalDialogControlBase.Designer.cs">
+      <DependentUpon>ShModalDialogControlBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ShModalDialogControlClosingEventArgs.cs" />
+    <Compile Include="Controls\ShUserControlBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Definitions\Base\ShAppMenuItemDefinitionBase.cs" />
+    <Compile Include="Definitions\UI\ShExplorerMenuItemDefinition.cs" />
+    <Compile Include="Definitions\UI\ShAppStartPageItemDefinition.cs" />
+    <Compile Include="Definitions\UI\ShAppTopMenuDocumentsItemDefinition.cs" />
+    <Compile Include="Definitions\UI\ShAppTopMenuItemDefinition.cs" />
+    <Compile Include="Definitions\UI\ShAppViewWindowControlDefinition.cs" />
+    <Compile Include="Events\App\ShOnAppExitEvent.cs" />
+    <Compile Include="Events\App\ShOnAppKeyDownEvent.cs" />
+    <Compile Include="Events\App\ShOnAppLoadCompletedEvent.cs" />
+    <Compile Include="Events\Base\ItemEventBase.cs" />
+    <Compile Include="Events\StartPage\ShOnAppStartPageLoadCompletedEvent.cs" />
+    <Compile Include="Events\UI\ShAddAppTopMenuItemEvent.cs" />
+    <Compile Include="Events\UI\ShAddAppViewWindowEvent.cs" />
+    <Compile Include="Extensions\ControlExtensions.cs" />
+    <Compile Include="Interfaces\IEntityEditorControl.cs" />
+    <Compile Include="Interfaces\ILongOperationControl.cs" />
+    <Compile Include="Interfaces\ISettingsEditorControl.cs" />
+    <Compile Include="Plugins\AppStartPagePluginBase.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BindService.cs" />
+    <Compile Include="Services\ShBind.cs" />
+    <Compile Include="Services\ShBusinessEntityDataService.cs" />
+    <Compile Include="Services\ShDesktopAppService.cs" />
+    <Compile Include="Utils\ShFormUtils.cs" />
+    <Compile Include="Utils\ShFormUtilsEx.cs" />
+    <Compile Include="Utils\ShowModalExOptions.cs" />
+    <Compile Include="Utils\ShUtils.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SubPointSolutions.Shelly.Core\SubPointSolutions.Shelly.Core.csproj">
+      <Project>{1CEC5A84-BCE6-409D-A321-E64D7AAD600D}</Project>
+      <Name>SubPointSolutions.Shelly.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Controls\ShModalDialogControlBase.resx">
+      <DependentUpon>ShModalDialogControlBase.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
