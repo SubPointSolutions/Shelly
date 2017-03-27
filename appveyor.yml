@@ -1,0 +1,11 @@
+test: off
+
+clone_folder: c:\prj
+
+build_script: 
+    - ps: c:\prj\Shelly\Build\build.ps1  -Target "Default-CI" 
+
+artifacts:
+    - path: '**\packages\*.nupkg'
+    - path: '**\packages\*.zip'
+    - path: '**\packages\*.zip.*'
