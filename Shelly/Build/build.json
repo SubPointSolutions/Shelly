@@ -1,0 +1,132 @@
+﻿{
+  "defaultSolutionDirectory": "./../",
+  "defaultSolutionFilePath": "./../Shelly.sln",
+  "defaultNuGetPackagesDirectory": "./build-artifact-nuget-packages",
+  "defaultChocolateyPackagesDirectory": "./build-artifact-cli-packages",
+  "defaultNuspecVersion": "0.1.0",
+
+  "defaultDocsBuildEnabled": false,
+
+  "defaultTestCategories": [
+    "CI.Core",
+    "CI.Docs"
+  ],
+  "customNuspecs": [
+    {
+      "Id": "SubPointSolutions.Shelly.Core",
+      "Version": "0.1.0-beta1",
+      "Dependencies": [
+        {
+          "Id": "Rx-Linq",
+          "Version": "2.2.5"
+        }
+      ],
+      "LicenseUrl": "https://github.com/SubPointSolutions/shelly",
+      "ProjectUrl": "https://github.com/SubPointSolutions/shelly",
+      "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+      "Description": "Provides common Shelly contracts, services and components.",
+      "Copyright": "Copyright 2017",
+      "Tags": [
+        "tool",
+        "tooling",
+        "winform",
+        "winforms",
+        "ide",
+        "ise",
+        "shell"
+      ],
+      "Files": [ ]
+    },
+    {
+      "Id": "SubPointSolutions.Shelly.Desktop",
+      "Version": "0.1.0-beta1",
+      "Dependencies": [
+        {
+          "Id": "SubPointSolutions.Shelly.Core",
+          "Version": "0.1.0-beta1"
+        }
+      ],
+      "LicenseUrl": "https://github.com/SubPointSolutions/shelly",
+      "ProjectUrl": "https://github.com/SubPointSolutions/shelly",
+      "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+      "Description": "Provides common contracts for Shelly app services based on WinForms.",
+      "Copyright": "Copyright 2017",
+      "Tags": [
+        "tool",
+        "tooling",
+        "winform",
+        "winforms",
+        "ide",
+        "ise",
+        "shell"
+      ],
+      "Files": [ ]
+    },
+    {
+      "Id": "SubPointSolutions.Shelly.Desktop.MetroFramework",
+      "Version": "0.1.0-beta1",
+      "Dependencies": [
+        {
+          "Id": "SubPointSolutions.Shelly.Desktop",
+          "Version": "0.1.0-beta1"
+        },
+        {
+          "Id": "MetroModernUI",
+          "Version": "1.4.0"
+        }
+      ],
+      "LicenseUrl": "https://github.com/SubPointSolutions/shelly",
+      "ProjectUrl": "https://github.com/SubPointSolutions/shelly",
+      "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+      "Description": "MetroFramework implementation for common Shelly contracts, servics and components.",
+      "Copyright": "Copyright 2016",
+      "Tags": [
+        "tool",
+        "tooling",
+        "winform",
+        "winforms",
+        "ide",
+        "ise",
+        "shell"
+      ],
+      "Files": [ ]
+    },
+    {
+      "Id": "SubPointSolutions.Shelly.Desktop.Wf",
+      "Version": "0.1.0-beta1",
+      "Dependencies": [
+        {
+          "Id": "SubPointSolutions.Shelly.Desktop",
+          "Version": "0.1.0-beta1"
+        },
+        {
+          "Id": "MetroModernUI",
+          "Version": "1.4.0"
+        }
+      ],
+      "LicenseUrl": "https://github.com/SubPointSolutions/shelly",
+      "ProjectUrl": "https://github.com/SubPointSolutions/shelly",
+      "IconUrl": "https://raw.githubusercontent.com/SubPointSolutions/spmeta2/dev/SPMeta2/SPMeta2.Dependencies/Images/SPMeta2_64_64.png",
+      "Description": "WinForms implementation for common Shelly contracts, servics and components.",
+      "Copyright": "Copyright 2016",
+      "Tags": [
+        "tool",
+        "tooling",
+        "winform",
+        "winforms",
+        "ide",
+        "ise",
+        "shell"
+      ],
+      "Files": [ ]
+    }
+  ],
+  "customChocolateySpecs": [
+   
+  ],
+  "defaultTestAssemblyPaths": [
+
+  ],
+  "defaultBuildDirs": [ ],
+  "defaultEnvironmentVariables": [ ]
+}
